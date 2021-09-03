@@ -1,0 +1,86 @@
+{
+  "name": "morse-cli",
+  "version": "0.0.1",
+  "description": "cli for morse of moyongshi",
+  "main": "./lib/bin/index.js",
+  "bin": {
+    "mos-cli": "lib/bin/index.js"
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "commandName": "morse-cli",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "rimraf lib && tsc",
+    "dev": "tsc -w",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mos-cli": "npx ./lib/bin/index.js",
+    "mos-cli-template": "npx ./lib/bin/index.js template",
+    "clean": "rimraf node_modules",
+    "first-release": "standard-version --first-release",
+    "prerelease": "standard-version --prerelease alpha",
+    "release-major": "standard-version --release-as major",
+    "release-minor": "standard-version --release-as minor",
+    "release-patch": "standard-version --release-as patch",
+    "publish": "git push --follow-tags origin UI && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moyongshi/mos-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "morse",
+    "react",
+    "template",
+    "vue"
+  ],
+  "author": "Haytham Gao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moyongshi/mos-cli/issues"
+  },
+  "homepage": "https://github.com/moyongshi/mos-cli#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@types/commander": "^2.12.2",
+    "@types/download": "^8.0.1",
+    "@types/eslint": "^7.2.13",
+    "@types/fs-extra": "^9.0.12",
+    "@types/inquirer": "^7.3.3",
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^16.7.10",
+    "@types/request": "^2.48.6",
+    "@types/shelljs": "^0.8.9",
+    "@types/update-notifier": "^5.1.0",
+    "@types/webpack-dev-server": "^3.11.5",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "standard-version": "^9.3.1",
+    "ts-jest": "^26.5.6",
+    "ts-node": "^10.2.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.1.0",
+    "download": "^8.0.0",
+    "fs-extra": "^10.0.0",
+    "handlebars": "^4.7.7",
+    "inquirer": "^8.1.2",
+    "log-symbols": "4",
+    "module-alias": "^2.2.2",
+    "ora": "5",
+    "react-dev-utils": "^11.0.4",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.4",
+    "update-notifier": "^5.1.0",
+    "yargs": "^17.1.1"
+  }
+}
